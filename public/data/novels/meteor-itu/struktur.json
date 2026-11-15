@@ -1,0 +1,12 @@
+{
+  "bab": [
+    {
+      "no": 1,
+      "judul": "Judul Bab 1",
+      "episode": [
+        { "no": 1, "judul": "Judul Episode 1", "file": "0001.txt", "tanggal": "2026-11-14" },
+        { "no": 2, "judul": "Judul Episode 2", "file": "0002.txt", "tanggal": "2026-11-14" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+/* Variabel warna, tema terang/gelap, reset, tipografi */
+:root {
+  --bg: #faf8f4;
+  --fg: #222222;
+  --mut: #777777;
+  --ac: #b5532c;
+  --ac-fg: #ffffff;
+  --card: #ffffff;
+  --line: #e6e1d8;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="terang"]) {
+    --bg: #15171a; --fg: #e2e2e2; --mut: #999999;
+    --ac: #e8895f; --ac-fg: #1a1a1a; --card: #1f2226; --line: #33373c;
+  }
+}
+:root[data-tema="gelap"] {
+  --bg: #15171a; --fg: #e2e2e2; --mut: #999999;
+  --ac: #e8895f; --ac-fg: #1a1a1a; --card: #1f2226; --line: #33373c;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.75;
+}
+h1, h2, h3 { line-height: 1.3; margin: 0 0 .5em; }
+p { margin: 0 0 1em; }
+.mut { color: var(--mut); }
+.galat { color: var(--mut); text-align: center; padding: 40px 0; }

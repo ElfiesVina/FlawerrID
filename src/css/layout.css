@@ -1,0 +1,40 @@
+/* Kerangka: header, area konten, navigasi bawah, lebar maksimum */
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+body { padding-top: env(safe-area-inset-top, 0px); }
+body::before {
+  content: "";
+  position: fixed; inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  background: var(--card);
+  z-index: 10;
+}
+.header {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9;
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 14px;
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+}
+.header h1 {
+  flex: 1; margin: 0; font-size: 16px; text-align: center;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.header button {
+  background: none; border: 0; color: var(--fg);
+  font-size: 20px; min-width: 36px; cursor: pointer;
+}
+.header .spasi { min-width: 36px; }
+#app { max-width: 640px; margin: 0 auto; padding: 18px 18px 100px; }
+.nav {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 9;
+  display: flex;
+  background: var(--card);
+  border-top: 1px solid var(--line);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.nav a {
+  flex: 1; text-align: center; padding: 10px 0;
+  color: var(--mut); text-decoration: none;
+  font: 12px system-ui, sans-serif;
+}
+.nav a.aktif { color: var(--ac); font-weight: 700; }

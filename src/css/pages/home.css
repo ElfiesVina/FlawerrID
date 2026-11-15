@@ -1,0 +1,15 @@
+/* Gaya khusus halaman Beranda. Hanya dipakai oleh index.html */
+.hero { text-align: center; padding: 12px 0 4px; }
+.avatar {
+  width: 104px; height: 104px; margin: 0 auto 12px;
+  border-radius: 50%; overflow: hidden;
+  background: linear-gradient(135deg, var(--ac), #6a3d8f);
+  color: #ffffff; font-size: 40px;
+  display: flex; align-items: center; justify-content: center;
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.cuplikan {
+  margin: 18px 0 22px; padding: 4px 14px;
+  border-left: 3px solid var(--ac);
+  font-style: italic;
+}
